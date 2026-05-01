@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Results &amp; export — SmileyMeter docs</title>
+  <meta name="description" content="SmileyMeter Results calendar, week start option, CSV export, and time zones.">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-brand" href="./">SmileyMeter</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="./">Docs</a>
+        <a href="../privacy/">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <header class="hero">
+      <div class="hero__text">
+        <p class="eyebrow">Insights</p>
+        <h1>Results &amp; export</h1>
+        <p class="updated">On-device summaries and optional CSV for deeper analysis.</p>
+      </div>
+    </header>
+
+    <section>
+      <h2>Results screen</h2>
+      <p>
+        <strong>Results</strong> shows an <strong>average mood by day</strong> calendar for one calendar month at a time.
+        Use the month controls to move backward or forward. The view is meant for a quick staff check-in (“how did this week feel?”)
+        without exporting data.
+      </p>
+      <p>
+        If there is no data for the selected range, the app shows an empty state so you can tell “no taps yet” from a technical error.
+      </p>
+    </section>
+
+    <section>
+      <h2>Time zones and “today”</h2>
+      <p>
+        Day boundaries for the calendar follow the tablet’s <strong>default time zone</strong> and local clock. If the device
+        travels or daylight saving changes, verify the system time zone when interpreting edge-of-day numbers.
+      </p>
+    </section>
+
+    <section>
+      <h2>Week start (Admin)</h2>
+      <p>
+        In <strong>Admin</strong>, under the results calendar options, you can choose how weeks align—for example
+        <strong>system default</strong>, <strong>Monday</strong>, or <strong>Sunday</strong> start—so the calendar matches
+        how your venue reports weeks.
+      </p>
+    </section>
+
+    <section>
+      <h2>CSV export</h2>
+      <p>
+        From <strong>Admin</strong>, <strong>Save feedback as CSV</strong> writes an event-level file (timestamps, mood type keys,
+        and related fields as implemented in the app). Use it for Excel, Google Sheets, or your own reporting pipeline.
+      </p>
+      <p>
+        Export may require an active <strong>Pro</strong> (or equivalent) subscription when billing is enabled—the Admin screen
+        states if export is locked.
+      </p>
+      <p>
+        After export, your organization is responsible for storing and sharing that file securely; the privacy policy describes
+        local-first storage and operator-controlled exports.
+      </p>
+    </section>
+
+    <section>
+      <h2>Legacy or mismatched mood keys</h2>
+      <p>
+        If you change how many mood buttons are active or migrate old data, aggregates may group uncommon keys into an
+        <strong>other</strong> bucket so totals stay honest. For raw detail, use the CSV export.
+      </p>
+    </section>
+
+    <section>
+      <h2>See also</h2>
+      <ul>
+        <li><a href="./admin-settings.html">Admin settings</a></li>
+        <li><a href="../privacy/">Privacy policy</a> — retention and processing</li>
+        <li><a href="./">Documentation home</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      <a href="./">← Back to docs</a>
+    </p>
+  </footer>
+</body>
+</html>

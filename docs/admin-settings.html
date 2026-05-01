@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin settings — SmileyMeter docs</title>
+  <meta name="description" content="Overview of SmileyMeter Admin: moods, branding, capture text, export, and danger zone.">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-brand" href="./">SmileyMeter</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="./">Docs</a>
+        <a href="../privacy/">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <header class="hero">
+      <div class="hero__text">
+        <p class="eyebrow">Configuration</p>
+        <h1>Admin settings</h1>
+        <p class="updated">Venue preferences stored on the device. Reach Admin from in-app navigation when not in kiosk mode.</p>
+      </div>
+    </header>
+
+    <section>
+      <h2>Opening Admin</h2>
+      <p>
+        When the tablet is <strong>not</strong> in <a href="./kiosk-mode.html">kiosk mode</a>, use the app’s navigation
+        to open <strong>Admin</strong>. On phones you may see a bottom navigation bar; on larger screens, a side rail.
+        Operators should unpin the device first if the floor tablet was left in kiosk mode.
+      </p>
+    </section>
+
+    <section>
+      <h2>Subscription (billing)</h2>
+      <p>
+        The <strong>Subscription</strong> section opens the flow for Google Play purchases or upgrades when billing is enabled.
+        Features such as CSV export may depend on your plan—see on-screen labels in the app.
+      </p>
+    </section>
+
+    <section>
+      <h2>Mood buttons &amp; faces</h2>
+      <ul>
+        <li>
+          <strong>How many mood buttons</strong> appear on capture (typically 2–5), with optional
+          <strong>reverse order</strong> (worst-to-best).
+        </li>
+        <li>
+          <strong>Face mode:</strong> emoji or custom <strong>graphic</strong> faces from the mood-face gallery (built-in defaults
+          plus images you add). Galleries for mood faces and capture backgrounds are separate so you pick the right asset type.
+        </li>
+        <li>
+          <strong>Row spacing</strong> adjusts how tightly mood buttons are packed (larger faces vs more whitespace).
+        </li>
+        <li>A <strong>preview</strong> shows how faces will look before you rely on them on the floor.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Branding</h2>
+      <ul>
+        <li>
+          <strong>Logo:</strong> optional image from the logo gallery, with a <strong>scale</strong> control and a way to reset
+          or clear the logo.
+        </li>
+        <li>
+          <strong>Capture background:</strong> default theme background, a solid <strong>color</strong>, or a custom
+          <strong>image</strong>. Background images are drawn with a <strong>fit</strong> (contain) style so the whole image stays
+          visible; letterboxing may appear if the aspect ratio differs from the screen.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Capture text</h2>
+      <ul>
+        <li>
+          <strong>Prompt</strong> — the question above the buttons (for example “How was your visit?”), with optional color styling.
+        </li>
+        <li>
+          <strong>Thank-you</strong> overlay after a tap: on/off, title, subtitle, optional icon, and how long it shows.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Kiosk mode (Admin)</h2>
+      <p>
+        Re-enable the <strong>introduction dialog</strong> before starting kiosk if staff previously chose
+        “Don’t show this again.” See <a href="./kiosk-mode.html">Kiosk mode</a> for pinning and exit.
+      </p>
+    </section>
+
+    <section>
+      <h2>Export &amp; results calendar</h2>
+      <p>
+        <strong>Save feedback as CSV</strong> exports event-level data for spreadsheets (availability may depend on subscription).
+        <strong>Results calendar</strong> options (such as whether the week starts on Monday or Sunday) align the calendar with how
+        your venue reads weeks. Details: <a href="./results-and-export.html">Results &amp; export</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Privacy policy link</h2>
+      <p>
+        Opens the published privacy policy in the browser (same content as
+        <a href="../privacy/">the privacy page</a> on this site).
+      </p>
+    </section>
+
+    <section>
+      <h2>Danger zone</h2>
+      <ul>
+        <li>
+          <strong>Delete all feedback data</strong> removes stored tap events from the app (irreversible). Use when you need to wipe
+          the tablet before redeployment.
+        </li>
+        <li>
+          <strong>Reset all settings</strong> restores venue preferences managed in Admin to defaults (does not replace uninstalling
+          the app; exact scope is what the app labels in the confirmation dialog).
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Developer / sample tools</h2>
+      <p>
+        Debug or internal builds may show extra sections (for example sample data). Production venue tablets normally use release
+        builds from Google Play.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      <a href="./">← Back to docs</a>
+    </p>
+  </footer>
+</body>
+</html>
