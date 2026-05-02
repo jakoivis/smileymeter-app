@@ -198,6 +198,20 @@ li {
   line-height: 1.45;
 }
 
+/* Inline Android nav key glyphs (outline triangle = Back, square = Overview) */
+.android-nav-keys__svg {
+  display: inline-block;
+  width: 1.15em;
+  height: 1.15em;
+  margin: 0 0.06em;
+  vertical-align: -0.22em;
+  color: inherit;
+}
+
+.android-nav-keys__svg--muted {
+  color: var(--muted);
+}
+
 .doc-list {
   list-style: none;
   padding: 0;

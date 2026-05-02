@@ -8,6 +8,16 @@
   <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+    <defs>
+      <symbol id="icon-android-nav-back-outline" viewBox="0 0 24 24">
+        <polygon points="14,5.5 6,12 14,18.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+      </symbol>
+      <symbol id="icon-android-nav-overview-outline" viewBox="0 0 24 24">
+        <rect x="7" y="7" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" />
+      </symbol>
+    </defs>
+  </svg>
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-brand" href="./">SmileyMeter</a>
@@ -27,8 +37,8 @@
       </div>
     </header>
 
-    <section>
-      <h2>What “kiosk mode” means in SmileyMeter</h2>
+    <section id="what-kiosk">
+      <h2>What kiosk mode is</h2>
       <p>
         Kiosk mode uses Android’s <strong>screen pinning</strong> / <strong>lock task</strong> behavior so the
         <strong>capture</strong> screen stays in the foreground for visitors. While the app is pinned:
@@ -49,15 +59,19 @@
       </ul>
     </section>
 
-    <section>
-      <h2>Starting kiosk mode</h2>
+    <section id="configure-kiosk">
+      <h2>Configure kiosk mode</h2>
+      <p>
+        SmileyMeter does <strong>not</strong> add its own PIN or password for kiosk exit. Exit uses the
+        <strong>same device lock</strong> you configure in Android settings (PIN, pattern, or biometric).
+      </p>
       <ol>
         <li>
           In Android <strong>Settings → Security</strong> (or your OEM’s equivalent), ensure
           <strong>screen pinning</strong> / <strong>pin windows</strong> is allowed if your device requires it.
         </li>
         <li>
-          Set up a <strong>secure lock screen</strong> on the tablet (PIN, pattern, or biometric). Unpinning relies on this.
+          Set up a <strong>secure lock screen</strong> on the tablet. Unpinning relies on this.
         </li>
         <li>Open SmileyMeter and go to the <strong>Capture</strong> screen.</li>
         <li>Tap <strong>Go to kiosk mode</strong> and confirm any system dialog.</li>
@@ -66,30 +80,51 @@
         If the system blocks pinning, the app shows a message and may offer to open <strong>Security settings</strong>.
         Cancelling the system dialog does not break the app—you can keep using Capture and navigation as usual.
       </p>
-    </section>
-
-    <section>
-      <h2>Device PIN, pattern, or biometric (not a SmileyMeter PIN)</h2>
       <p>
-        SmileyMeter does <strong>not</strong> add its own PIN or password for kiosk exit. Exit uses the
-        <strong>same device lock</strong> you configured in Android settings. Your venue or IT policy is responsible
-        for choosing and safeguarding that lock; the app does not store or manage those credentials.
+        You are responsible for configuring and maintaining a screen lock on this tablet (PIN, pattern, or biometric),
+        as your venue or IT policy requires. Exiting kiosk mode relies on that lock to confirm unpinning. SmileyMeter
+        does not set up, store, or manage your device PIN or other lock credentials for you.
       </p>
     </section>
 
-    <section>
-      <h2>Leaving kiosk mode (exit / unpin)</h2>
+    <section id="exit-kiosk">
+      <h2>Exit kiosk mode</h2>
       <p>
-        Use the <strong>system unpin</strong> gesture. On many devices this is <strong>holding Back and Overview (Recents)</strong>,
-        but the exact gesture or on-screen steps depend on Android version and manufacturer—follow what the device shows.
+        Use Android’s <strong>system unpin</strong> flow. The exact gesture or buttons depend on your navigation mode,
+        Android version, and manufacturer—follow the <strong>on-screen</strong> prompts your device shows.
+      </p>
+      <ul>
+        <li>
+          <strong>Gesture navigation</strong> (no on-screen
+          <svg class="android-nav-keys__svg android-nav-keys__svg--muted" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-android-nav-back-outline" /></svg>
+          <strong>Back</strong>
+          and
+          <svg class="android-nav-keys__svg android-nav-keys__svg--muted" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-android-nav-overview-outline" /></svg>
+          <strong>Overview</strong> keys):
+          swipe up from the <strong>bottom</strong> of the screen and <strong>hold</strong> until the unpin confirmation appears.
+        </li>
+        <li>
+          <strong>Three-button navigation:</strong> on many devices, <strong>hold</strong>
+          <svg class="android-nav-keys__svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-android-nav-back-outline" /></svg>
+          <strong>Back</strong>
+          and
+          <svg class="android-nav-keys__svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-android-nav-overview-outline" /></svg>
+          <strong>Overview</strong> (Recents) together until prompted to unpin.
+        </li>
+      </ul>
+      <p>
+        If you enabled the usual security option during setup, you must enter your <strong>PIN, pattern, or password</strong>
+        (or use biometric unlock if the device allows it) to complete unpinning. This is <strong>not</strong> a separate
+        SmileyMeter password. When authentication succeeds, the app unpins and you regain normal access; navigation to
+        <strong>Results</strong> and <strong>Admin</strong> is available again.
       </p>
       <p>
-        After you start unpinning, Android asks you to <strong>authenticate with the device lock</strong>. When that succeeds,
-        SmileyMeter returns to normal: navigation to Results and Admin is available again.
+        Official Android help:
+        <a href="https://support.google.com/android/answer/9455138?hl=en">Pin and unpin your screen</a>.
       </p>
     </section>
 
-    <section>
+    <section id="keep-screen-on">
       <h2>Keep screen on while pinned</h2>
       <p>
         While kiosk mode is active, SmileyMeter sets the window to <strong>keep the screen on</strong> so the kiosk does not
